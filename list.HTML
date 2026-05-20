@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FF Academy - LinkedIn 교육생 명단</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Pretendard Font -->
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/variable/pretendardvariable.css" rel="stylesheet" type="text/css" />
+    <style>
+        body {
+            font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+            background-color: #f8fafc;
+        }
+        /* 행 오버 효과 */
+        .table-row:hover {
+            background-color: #f1f5f9;
+        }
+        /* 조별 뱃지 색상 */
+        .badge-1 { background-color: #fee2e2; color: #991b1b; }
+        .badge-2 { background-color: #fef3c7; color: #92400e; }
+        .badge-3 { background-color: #dcfce3; color: #166534; }
+        .badge-4 { background-color: #e0e7ff; color: #3730a3; }
+        .badge-5 { background-color: #f3e8ff; color: #6b21a8; }
+    </style>
+</head>
+<body class="p-6 md:p-12">
+
+    <div class="max-w-6xl mx-auto">
+        <!-- 헤더 영역 -->
+        <div class="mb-8 flex flex-col md:flex-row md:items-center justify-between">
+            <div>
+                <h1 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">FF Academy <span class="text-blue-600">LinkedIn</span> 함께해요 ♥️</h1>
+                <p class="text-gray-600">패스트파이브 링크드인 활용 강의 교육생 리스트입니다.</p>
+            </div>
+            <div class="mt-4 md:mt-0">
+              
+            </div>
+        </div>
+
+        <!-- 표 영역 -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+            <div class="overflow-x-auto">
+                <table id="rosterTable" class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-gray-50 border-b border-gray-200">
+                            <th class="px-6 py-4 text-sm font-semibold text-gray-600 w-24 text-center">조 구성</th>
+                            <th class="px-6 py-4 text-sm font-semibold text-gray-600">성함</th>
+                            <th class="px-6 py-4 text-sm font-semibold text-gray-600">그룹</th>
+                            <th class="px-6 py-4 text-sm font-semibold text-gray-600">팀</th>
+                            <th class="px-6 py-4 text-sm font-semibold text-gray-600 text-center">프로필 링크</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <!-- 1조 -->
+                        <tr class="table-row">
+                            <td class="px-6 py-3 text-center"><span class="px-3 py-1 rounded-full text-xs font-bold badge-1">1조</span></td>
+                            <td class="px-6 py-3 font-medium text-gray-900">강민수</td>
+                            <td class="px-6 py-3 text-gray-600">대표직속</td>
+                            <td class="px-6 py-3 text-gray-600">CRM팀</td>
+                            <td class="px-6 py-3 text-center"><a href="https://www.linkedin.com/in/minsu-kang-kor/" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium hover:underline text-sm inline-flex items-center gap-1">링크드인 <span class="text-lg leading-none">↗</span></a></td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="px-6 py-3 text-center"><span class="px-3 py-1 rounded-full text-xs font-bold badge-1">1조</span></td>
+                            <td class="px-6 py-3 font-medium text-gray-900">조충식</td>
+                            <td class="px-6 py-3 text-gray-600">대표직속</td>
+                            <td class="px-6 py-3 text-gray-600">QC파트</td>
+                            <td class="px-6 py-3 text-center"><a href="https://www.linkedin.com/in/%EC%B6%A9%EC%8B%9D-%EC%A1%B0-a878283a2/" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium hover:underline text-sm inline-flex items-center gap-1">링크드인 <span class="text-lg leading-none">↗</span></a></td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="px-6 py-3 text-center"><span class="px-3 py-1 rounded-full text-xs font-bold badge-1">1조</span></td>
+                            <td class="px-6 py-3 font-medium text-gray-900">김현기</td>
+                            <td class="px-6 py-3 text-gray-600">공간커머스그룹</td>
+                            <td class="px-6 py-3 text-gray-600">사업운영팀</td>
+                            <td class="px-6 py-3 text-center"><a href="https://www.linkedin.com/in/hyunki-kim-%EA%B9%80%ED%98%84%EA%B8%B0-a08752b6/" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium hover:underline text-sm inline-flex items-center gap-1">링크드인 <span class="text-lg leading-none">↗</span></a></td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="px-6 py-3 text-center"><span class="px-3 py-1 rounded-full text-xs font-bold badge-1">1조</span></td>
+                            <td class="px-6 py-3 font-medium text-gray-900">방지원</td>
+                            <td class="px-6 py-3 text-gray-600">공간커머스그룹</td>
+                            <td class="px-6 py-3 text-gray-600">프로덕트팀/데이터파트</td>
+                            <td class="px-6 py-3 text-center"><a href="https://www.linkedin.com/in/%EC%A7%80%EC%9B%90-%EB%B0%A9-1a34b0386/" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium hover:underline text-sm inline-flex items-center gap-1">링크드인 <span class="text-lg leading-none">↗</span></a></td>
+                        </tr>
+
+                        <!-- 2조 -->
+                        <tr class="table-row bg-gray-50/50">
+                            <td class="px-6 py-3 text-center"><span class="px-3 py-1 rounded-full text-xs font-bold badge-2">2조</span></td>
+                            <td class="px-6 py-3 font-medium text-gray-900">백지호</td>
+                            <td class="px-6 py-3 text-gray-600">부동산사업그룹</td>
+                            <td class="px-6 py-3 text-gray-600">지점개발팀</td>
+                            <td class="px-6 py-3 text-center"><a href="https://www.linkedin.com/in/%EC%A7%80%ED%98%B8-%EB%B0%B1-4381a440b/" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium hover:underline text-sm inline-flex items-center gap-1">링크드인 <span class="text-lg leading-none">↗</span></a></td>
+                        </tr>
+                        <tr class="table-row bg-gray-50/50">
+                            <td class="px-6 py-3 text-center"><span class="px-3 py-1 rounded-full text-xs font-bold badge-2">2조</span></td>
+                            <td class="px-6 py-3 font-medium text-gray-900">김영도</td>
+                            <td class="px-6 py-3 text-gray-600">부동산사업그룹</td>
+                            <td class="px-6 py-3 text-gray-600">VC팀</td>
+                            <td class="px-6 py-3 text-center"><a href="https://www.linkedin.com/in/%EC%98%81%EB%8F%84-%EA%B9%80-804849356/?skipRedirect=true" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium hover:underline text-sm inline-flex items-center gap-1">링크드인 <span class="text-lg leading-none">↗</span></a></td>
+                        </tr>
+                        <tr class="table-row bg-gray-50/50">
+                            <td class="px-6 py-3 text-center"><span class="px-3 py-1 rounded-full text-xs font-bold badge-2">2조</span></td>
+                            <td class="px-6 py-3 font-medium text-gray-900">육재복</td>
+                            <td class="px-6 py-3 text-gray-600">부동산사업그룹</td>
+                            <td class="px-6 py-3 text-gray-600">VC팀</td>
+                            <td class="px-6 py-3 text-center"><a href="http://linkedin.com/in/%EC%9C%A1%EC%9E%AC%EB%B3%B5" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium hover:underline text-sm inline-flex items-center gap-1">링크드인 <span class="text-lg leading-none">↗</span></a></td>
+                        </tr>
+                        <tr class="table-row bg-gray-50/50">
+                            <td class="px-6 py-3 text-center"><span class="px-3 py-1 rounded-full text-xs font-bold badge-2">2조</span></td>
+                            <td class="px-6 py-3 font-medium text-gray-900">김규영</td>
+                            <td class="px-6 py-3 text-gray-600">Powered by FF그룹</td>
+                            <td class="px-6 py-3 text-gray-600">매물소싱</td>
+                            <td class="px-6 py-3 text-center"><a href="https://www.linkedin.com/in/%EA%B7%9C%EC%98%81-%EA%B9%80-4b717240b/" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium hover:underline text-sm inline-flex items-center gap-1">링크드인 <span class="text-lg leading-none">↗</span></a></td>
+                        </tr>
+
+                        <!-- 3조 -->
+                        <tr class="table-row">
+                            <td class="px-6 py-3 text-center"><span class="px-3 py-1 rounded-full text-xs font-bold badge-3">3조</span></td>
+                            <td class="px-6 py-3 font-medium text-gray-900">강민지</td>
+                            <td class="px-6 py-3 text-gray-600">오피스개발그룹</td>
+                            <td class="px-6 py-3 text-gray-600">공간기획팀</td>
+                            <td class="px-6 py-3 text-center"><a href="https://www.linkedin.com/in/%EB%AF%BC%EC%A7%80-%EA%B0%95-a9ba9840a/" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium hover:underline text-sm inline-flex items-center gap-1">링크드인 <span class="text-lg leading-none">↗</span></a></td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="px-6 py-3 text-center"><span class="px-3 py-1 rounded-full text-xs font-bold badge-3">3조</span></td>
+                            <td class="px-6 py-3 font-medium text-gray-900">길혜준</td>
+                            <td class="px-6 py-3 text-gray-600">오피스개발그룹</td>
+                            <td class="px-6 py-3 text-gray-600">공간기획팀</td>
+                            <td class="px-6 py-3 text-center"><a href="https://www.linkedin.com/in/%EA%B8%B8%ED%98%9C%EC%A4%80-hyejun-gil-b63344402/" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium hover:underline text-sm inline-flex items-center gap-1">링크드인 <span class="text-lg leading-none">↗</span></a></td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="px-6 py-3 text-center"><span class="px-3 py-1 rounded-full text-xs font-bold badge-3">3조</span></td>
+                            <td class="px-6 py-3 font-medium text-gray-900">문혜령</td>
+                            <td class="px-6 py-3 text-gray-600">오피스개발그룹</td>
+                            <td class="px-6 py-3 text-gray-600">공간기획팀</td>
+                            <td class="px-6 py-3 text-center"><a href="https://www.linkedin.com/in/%ED%98%9C%EB%A0%B9-%EB%AC%B8-91414940a/" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium hover:underline text-sm inline-flex items-center gap-1">링크드인 <span class="text-lg leading-none">↗</span></a></td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="px-6 py-3 text-center"><span class="px-3 py-1 rounded-full text-xs font-bold badge-3">3조</span></td>
+                            <td class="px-6 py-3 font-medium text-gray-900">황륜희</td>
+                            <td class="px-6 py-3 text-gray-600">오피스개발그룹</td>
+                            <td class="px-6 py-3 text-gray-600">공간기획팀</td>
+                            <td class="px-6 py-3 text-center"><a href="https://www.linkedin.com/in/ryunhui-hwang-3553b1290/" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium hover:underline text-sm inline-flex items-center gap-1">링크드인 <span class="text-lg leading-none">↗</span></a></td>
+                        </tr>
+
+                        <!-- 4조 -->
+                        <tr class="table-row bg-gray-50/50">
+                            <td class="px-6 py-3 text-center"><span class="px-3 py-1 rounded-full text-xs font-bold badge-4">4조</span></td>
+                            <td class="px-6 py-3 font-medium text-gray-900">임승현</td>
+                            <td class="px-6 py-3 text-gray-600">오피스세일즈그룹</td>
+                            <td class="px-6 py-3 text-gray-600">수요창출파트</td>
+                            <td class="px-6 py-3 text-center"><a href="https://www.linkedin.com/in/%EC%8A%B9%ED%98%84-%EC%9E%84-0b1a5133b" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium hover:underline text-sm inline-flex items-center gap-1">링크드인 <span class="text-lg leading-none">↗</span></a></td>
+                        </tr>
+                        <tr class="table-row bg-gray-50/50">
+                            <td class="px-6 py-3 text-center"><span class="px-3 py-1 rounded-full text-xs font-bold badge-4">4조</span></td>
+                            <td class="px-6 py-3 font-medium text-gray-900">정찬미</td>
+                            <td class="px-6 py-3 text-gray-600">오피스세일즈그룹</td>
+                            <td class="px-6 py-3 text-gray-600">수요창출파트</td>
+                            <td class="px-6 py-3 text-center"><a href="https://www.linkedin.com/in/%EC%B0%AC%EB%AF%B8-%EC%A0%95-60b2973a4/" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium hover:underline text-sm inline-flex items-center gap-1">링크드인 <span class="text-lg leading-none">↗</span></a></td>
+                        </tr>
+                        <tr class="table-row bg-gray-50/50">
+                            <td class="px-6 py-3 text-center"><span class="px-3 py-1 rounded-full text-xs font-bold badge-4">4조</span></td>
+                            <td class="px-6 py-3 font-medium text-gray-900">이은교</td>
+                            <td class="px-6 py-3 text-gray-600">오피스세일즈그룹</td>
+                            <td class="px-6 py-3 text-gray-600">세일즈1팀</td>
+                            <td class="px-6 py-3 text-center"><a href="https://www.linkedin.com/in/%EC%9D%80%EA%B5%90-%EC%9D%B4-9ab137369/" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium hover:underline text-sm inline-flex items-center gap-1">링크드인 <span class="text-lg leading-none">↗</span></a></td>
+                        </tr>
+                        <tr class="table-row bg-gray-50/50">
+                            <td class="px-6 py-3 text-center"><span class="px-3 py-1 rounded-full text-xs font-bold badge-4">4조</span></td>
+                            <td class="px-6 py-3 font-medium text-gray-900">정차용</td>
+                            <td class="px-6 py-3 text-gray-600">오피스세일즈그룹</td>
+                            <td class="px-6 py-3 text-gray-600">세일즈2팀</td>
+                            <td class="px-6 py-3 text-center"><a href="https://www.linkedin.com/in/%EC%B0%A8%EC%9A%A9-%EC%A0%95-44408639a/" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium hover:underline text-sm inline-flex items-center gap-1">링크드인 <span class="text-lg leading-none">↗</span></a></td>
+                        </tr>
+                        <tr class="table-row bg-gray-50/50">
+                            <td class="px-6 py-3 text-center"><span class="px-3 py-1 rounded-full text-xs font-bold badge-4">4조</span></td>
+                            <td class="px-6 py-3 font-medium text-gray-900">강동우</td>
+                            <td class="px-6 py-3 text-gray-600">오피스세일즈그룹</td>
+                            <td class="px-6 py-3 text-gray-600">워크라운지사업팀</td>
+                            <td class="px-6 py-3 text-center"><a href="https://www.linkedin.com/in/dongwoo-kang-78306633a/" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium hover:underline text-sm inline-flex items-center gap-1">링크드인 <span class="text-lg leading-none">↗</span></a></td>
+                        </tr>
+
+                        <!-- 5조 -->
+                        <tr class="table-row">
+                            <td class="px-6 py-3 text-center"><span class="px-3 py-1 rounded-full text-xs font-bold badge-5">5조</span></td>
+                            <td class="px-6 py-3 font-medium text-gray-900">정이랑</td>
+                            <td class="px-6 py-3 text-gray-600">지점운영그룹</td>
+                            <td class="px-6 py-3 text-gray-600">사업1팀</td>
+                            <td class="px-6 py-3 text-center"><a href="https://www.linkedin.com/in/%EC%9D%B4%EB%9E%91-%EC%A0%95-30215840a/" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium hover:underline text-sm inline-flex items-center gap-1">링크드인 <span class="text-lg leading-none">↗</span></a></td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="px-6 py-3 text-center"><span class="px-3 py-1 rounded-full text-xs font-bold badge-5">5조</span></td>
+                            <td class="px-6 py-3 font-medium text-gray-900">김동규</td>
+                            <td class="px-6 py-3 text-gray-600">지점운영그룹</td>
+                            <td class="px-6 py-3 text-gray-600">사업1팀</td>
+                            <td class="px-6 py-3 text-center"><a href="https://www.linkedin.com/in/%EB%8F%99%EA%B7%9C-%EA%B9%80-8b013a40b/" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium hover:underline text-sm inline-flex items-center gap-1">링크드인 <span class="text-lg leading-none">↗</span></a></td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="px-6 py-3 text-center"><span class="px-3 py-1 rounded-full text-xs font-bold badge-5">5조</span></td>
+                            <td class="px-6 py-3 font-medium text-gray-900">서지은</td>
+                            <td class="px-6 py-3 text-gray-600">지점운영그룹</td>
+                            <td class="px-6 py-3 text-gray-600">사업2팀</td>
+                            <td class="px-6 py-3 text-center"><a href="https://www.linkedin.com/in/twinklexjulie/" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium hover:underline text-sm inline-flex items-center gap-1">링크드인 <span class="text-lg leading-none">↗</span></a></td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="px-6 py-3 text-center"><span class="px-3 py-1 rounded-full text-xs font-bold badge-5">5조</span></td>
+                            <td class="px-6 py-3 font-medium text-gray-900">오은비</td>
+                            <td class="px-6 py-3 text-gray-600">지점운영그룹</td>
+                            <td class="px-6 py-3 text-gray-600">사업3팀</td>
+                            <td class="px-6 py-3 text-center"><a href="https://www.linkedin.com/in/%EC%9D%80%EB%B9%84-%EC%98%A4-2196b2269/" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium hover:underline text-sm inline-flex items-center gap-1">링크드인 <span class="text-lg leading-none">↗</span></a></td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="px-6 py-3 text-center"><span class="px-3 py-1 rounded-full text-xs font-bold badge-5">5조</span></td>
+                            <td class="px-6 py-3 font-medium text-gray-900">정성현</td>
+                            <td class="px-6 py-3 text-gray-600">지점운영그룹</td>
+                            <td class="px-6 py-3 text-gray-600">사업3팀</td>
+                            <td class="px-6 py-3 text-center"><a href="https://www.linkedin.com/in/%EC%84%B1%ED%98%84-%EC%A0%95-1147942b6/?isSelfProfile=true" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium hover:underline text-sm inline-flex items-center gap-1">링크드인 <span class="text-lg leading-none">↗</span></a></td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="px-6 py-3 text-center"><span class="px-3 py-1 rounded-full text-xs font-bold badge-5">5조</span></td>
+                            <td class="px-6 py-3 font-medium text-gray-900">정의엽</td>
+                            <td class="px-6 py-3 text-gray-600">지점운영그룹</td>
+                            <td class="px-6 py-3 text-gray-600">사업3팀</td>
+                            <td class="px-6 py-3 text-center"><a href="https://www.linkedin.com/in/%EC%9D%98%EC%97%BD-%EC%A0%95-487aa2362/" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium hover:underline text-sm inline-flex items-center gap-1">링크드인 <span class="text-lg leading-none">↗</span></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 알림 메시지 영역 -->
+        <div id="toast" class="fixed bottom-4 right-4 bg-gray-800 text-white px-6 py-3 rounded-lg shadow-lg transform translate-y-20 opacity-0 transition-all duration-300">
+            ✅ 표가 클립보드에 복사되었습니다!
+        </div>
+    </div>
+
+    <script>
+        function copyTable() {
+            const table = document.getElementById('rosterTable');
+            
+            // Clipboard API를 사용하여 텍스트/HTML 형식으로 복사
+            const range = document.createRange();
+            range.selectNode(table);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+
+            try {
+                // 서식 유지를 위해 execCommand 사용 (슬랙 붙여넣기 호환용)
+                document.execCommand('copy');
+                showToast();
+            } catch (err) {
+                console.error('복사 실패:', err);
+                alert('복사에 실패했습니다. 브라우저 설정에서 클립보드 접근을 허용해주세요.');
+            }
+            
+            selection.removeAllRanges();
+        }
+
+        function showToast() {
+            const toast = document.getElementById('toast');
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

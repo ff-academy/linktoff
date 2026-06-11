@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FF Academy 링크드인 활성화 교육 리뷰</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background-color: #f3f4f6; }
+        .table-scroll::-webkit-scrollbar { width: 6px; height: 6px; }
+        .table-scroll::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 4px; }
+        .table-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        .table-scroll::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        
+        .badge-1 { background-color: #e0f2fe; color: #0284c7; }
+        .badge-2 { background-color: #dcfce7; color: #16a34a; }
+        .badge-3 { background-color: #fef08a; color: #ca8a04; }
+        .badge-4 { background-color: #ffedd5; color: #ea580c; }
+        .badge-5 { background-color: #f3e8ff; color: #9333ea; }
+        
+        .sortable:hover { cursor: pointer; background-color: #f8fafc; }
+        .sort-icon::after { content: ' ↕'; color: #cbd5e1; font-size: 0.8em; margin-left: 2px; }
+        .sort-asc::after { content: ' ↓'; color: #3b82f6; }
+        .sort-desc::after { content: ' ↑'; color: #3b82f6; }
+    </style>
+</head>
+<body class="text-gray-800 antialiased p-4 md:p-8">
+
+    <div class="max-w-7xl mx-auto space-y-8">
+        
+        <!-- 상단 헤더 -->
+        <header class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 md:p-8 flex flex-col md:flex-row justify-between items-start md:items-center">
+            <div>
+                <div class="inline-block px-3 py-1 bg-blue-100 text-blue-700 font-bold rounded-full text-sm mb-3">FF Academy</div>
+                <h1 class="text-3xl font-extrabold text-gray-900 tracking-tight">링크드인 활성화 교육 최종 평가표</h1>
+                <p class="text-gray-500 mt-2 font-medium">작성일자: 2026.06.11 (최종 산정 기준) / 총점 100점 만점</p>
+            </div>
+            <div class="mt-4 md:mt-0 flex flex-col items-end">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" class="w-12 h-12 mb-2 rounded shadow-sm">
+            </div>
+        </header>
+
+        <!-- 전체 요약 카드 섹션 -->
+        <section class="grid grid-cols-2 md:grid-cols-5 gap-4">
+            <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm flex flex-col items-center justify-center">
+                <span class="text-sm font-bold text-gray-500 mb-1">전체 교육인원</span>
+                <span class="text-3xl font-extrabold text-gray-900">22<span class="text-lg font-medium text-gray-500 ml-1">명</span></span>
+            </div>
+            <div class="bg-gradient-to-br from-blue-600 to-indigo-700 p-5 rounded-xl shadow-md flex flex-col items-center justify-center text-white transform transition hover:scale-105">
+                <span class="text-sm font-bold text-blue-100 mb-1">🏆 MVP (최우수)</span>
+                <span class="text-3xl font-extrabold">3<span class="text-lg font-medium text-blue-200 ml-1">명</span></span>
+            </div>
+            <div class="bg-white p-5 rounded-xl border border-green-200 shadow-sm flex flex-col items-center justify-center transform transition hover:scale-105">
+                <span class="text-sm font-bold text-green-600 mb-1">🏅 우수 수료</span>
+                <span class="text-3xl font-extrabold text-gray-900">4<span class="text-lg font-medium text-gray-500 ml-1">명</span></span>
+            </div>
+            <div class="bg-white p-5 rounded-xl border border-blue-200 shadow-sm flex flex-col items-center justify-center transform transition hover:scale-105">
+                <span class="text-sm font-bold text-blue-600 mb-1">🎓 정상 수료</span>
+                <span class="text-3xl font-extrabold text-gray-900">5<span class="text-lg font-medium text-gray-500 ml-1">명</span></span>
+            </div>
+            <div class="bg-white p-5 rounded-xl border border-red-200 shadow-sm flex flex-col items-center justify-center transform transition hover:scale-105">
+                <span class="text-sm font-bold text-red-500 mb-1">미수료</span>
+                <span class="text-3xl font-extrabold text-gray-900">10<span class="text-lg font-medium text-gray-500 ml-1">명</span></span>
+            </div>
+        </section>
+
+        <!-- 수료 기준 안내 -->
+        <section class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 md:p-8">
+            <h2 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                <span class="bg-blue-100 text-blue-700 w-8 h-8 rounded-full flex items-center justify-center text-sm mr-3">1</span>
+                최종 수료 기준
+            </h2>
+            <div class="bg-gray-50 rounded-xl p-5 border border-gray-100">
+                <p class="text-sm text-gray-600 mb-3"><span class="font-bold text-red-500">※ 변경 사항:</span> 기존 3번 조건(신규 일촌 50명+ & 좋아요 합산 100개+)은 수료 조건에서 제외되었습니다.</p>
+                <ul class="space-y-2">
+                    <li class="flex items-center text-gray-800 font-medium">
+                        <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        조건 ① : 대면 세션 <span class="text-blue-600 font-bold ml-1">1회 이상 </span> 참석
+                    </li>
+                    <li class="flex items-center text-gray-800 font-medium">
+                        <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        조건 ② : 콘텐츠 <span class="text-blue-600 font-bold ml-1">3개 이상 </span> 업로드 (환산점수 기준 10점 이상)
+                    </li>
+                </ul>
+                <p class="mt-3 text-xs font-bold text-red-500 bg-red-50 inline-block px-2 py-1 rounded">※ 미충족 시 총점과 무관하게 미수료</p>
+            </div>
+        </section>
+
+        <!-- 교육생별 상세 평가 결과 -->
+        <section class="mt-8">
+            <div class="mb-6 border-b pb-3">
+                <h2 class="text-2xl font-bold text-gray-900 flex items-center">
+                    <span class="bg-blue-100 text-blue-700 w-8 h-8 rounded-full flex items-center justify-center text-sm mr-3 shrink-0">2</span>
+                    교육생별 상세 평가 결과
+                </h2>
+            </div>
+            
+            <!-- 탭 버튼 및 제어 영역 -->
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end border-b border-gray-200 mb-4 gap-3 sm:gap-0">
+                <div class="flex space-x-2 overflow-x-auto w-full sm:w-auto">
+                    <button id="tab-btn-raw" onclick="switchTab('raw')" class="whitespace-nowrap px-6 py-3 rounded-t-lg font-bold text-sm transition-colors duration-200 bg-blue-600 text-white border-b-2 border-blue-600">📈 기초 지표 현황 (원시데이터)</button>
+                    <button id="tab-btn-score" onclick="switchTab('score')" class="whitespace-nowrap px-6 py-3 rounded-t-lg font-bold text-sm transition-colors duration-200 bg-gray-50 text-gray-600 hover:bg-gray-100 border-b-2 border-transparent">📊 평가 점수표 (환산점수)</button>
+                </div>
+                <div class="pb-2 w-full sm:w-auto flex justify-end sm:justify-start">
+                    <button onclick="resetTables()" class="px-4 py-2 bg-white hover:bg-gray-50 text-gray-700 text-sm font-bold rounded-lg flex items-center transition-colors shadow-sm border border-gray-300 whitespace-nowrap shrink-0">
+                        🔄 정렬 초기화
+                    </button>
+                </div>
+            </div>
+
+            <!-- 탭 1: 기초 지표 현황 (원시데이터) -->
+            <div id="tab-content-raw" class="table-scroll overflow-x-auto rounded-xl border border-gray-200 shadow-sm bg-white">
+                <table class="w-full text-sm text-left text-gray-600 whitespace-nowrap" id="table-raw">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-100 border-b border-gray-200">
+                        <tr>
+                            <th class="px-3 py-3 text-center sortable sort-icon" onclick="sortTable('table-raw', 0, 'string')">조</th>
+                            <th class="px-3 py-3 text-center min-w-[100px]">이름(링크)</th>
+                            <th class="px-3 py-3 text-center sortable sort-icon" onclick="sortTable('table-raw', 2, 'string')">대면참석</th>
+                            <th class="px-3 py-3 text-center bg-blue-50 text-blue-800 sortable sort-icon" onclick="sortTable('table-raw', 3, 'number')">작성글(⭐)</th>
+                            <th class="px-3 py-3 text-center bg-purple-50 text-purple-800 sortable sort-icon" onclick="sortTable('table-raw', 4, 'number')">최고 노출수</th>
+                            <th class="px-3 py-3 text-center bg-teal-50 text-teal-800 sortable sort-icon" onclick="sortTable('table-raw', 5, 'number')">일촌 성장</th>
+                            <th class="px-3 py-3 text-center bg-teal-50 text-teal-800 sortable sort-icon" onclick="sortTable('table-raw', 6, 'number')">SSI 성장</th>
+                            <th class="px-3 py-3 text-center bg-orange-50 text-orange-800 sortable sort-icon" onclick="sortTable('table-raw', 7, 'number')">동료 댓글</th>
+                            <th class="px-3 py-3 text-center bg-orange-50 text-orange-800 sortable sort-icon" onclick="sortTable('table-raw', 8, 'number')">내글 댓글</th>
+                            <th class="px-3 py-3 text-center bg-orange-50 text-orange-800 sortable sort-icon" onclick="sortTable('table-raw', 9, 'number')">좋아요</th>
+                            <th class="px-3 py-3 text-center bg-gray-800 text-white sortable sort-icon" onclick="sortTable('table-raw', 10, 'number')">총점</th>
+                            <th class="px-3 py-3 text-center bg-gray-900 text-white w-24">수료</th>
+                            <th class="px-3 py-3 text-center bg-gray-900 text-white w-24">등급</th>
+                        </tr>
+                    </thead>
+                    <tbody id="raw-tbody">
+                        <!-- Raw 데이터 생성 (점수 및 수료여부 동기화) -->
+                        <tr class="table-row hover:bg-gray-50 border-b border-gray-100" data-index="1">
+                            <td class="px-3 py-3 text-center"><span class="px-2 py-1 rounded-md text-xs font-bold badge-1">1조</span></td>
+                            <td class="px-3 py-3 font-bold text-gray-900 text-center"><a href="https://www.linkedin.com/in/minsu-kang-kor/" target="_blank" class="hover:text-blue-600 hover:underline">강민수<span class="text-xs text-gray-400 ml-1">↗</span></a></td>
+                            <td class="px-3 py-3 text-center font-bold text-blue-600">O</td>
+                            <td class="px-3 py-3 text-center font-bold relative text-blue-700">5 <span class="absolute top-1 right-2 text-yellow-500 text-xs">⭐</span></td>
+                            <td class="px-3 py-3 text-center text-purple-700">785</td><td class="px-3 py-3 text-center text-teal-700">36</td><td class="px-3 py-3 text-center text-teal-700">25</td><td class="px-3 py-3 text-center text-orange-700">0</td><td class="px-3 py-3 text-center text-orange-700">0</td><td class="px-3 py-3 text-center text-orange-700">5</td>
+                            <td class="px-3 py-3 text-center font-black text-gray-900 bg-gray-100">67</td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold">수료</span></td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold">정상 수료</span></td>
+                        </tr>
+                        <tr class="table-row hover:bg-gray-50 border-b border-gray-100" data-index="2">
+                            <td class="px-3 py-3 text-center"><span class="px-2 py-1 rounded-md text-xs font-bold badge-1">1조</span></td>
+                            <td class="px-3 py-3 font-bold text-gray-900 text-center"><a href="https://www.linkedin.com/in/%EC%B6%A9%EC%8B%9D-%EC%A1%B0-a878283a2/" target="_blank" class="hover:text-blue-600 hover:underline">조충식<span class="text-xs text-gray-400 ml-1">↗</span></a></td>
+                            <td class="px-3 py-3 text-center font-bold text-blue-600">O</td>
+                            <td class="px-3 py-3 text-center font-bold relative text-blue-700">4</td>
+                            <td class="px-3 py-3 text-center text-purple-700">2172</td><td class="px-3 py-3 text-center text-teal-700">625</td><td class="px-3 py-3 text-center text-teal-700">21</td><td class="px-3 py-3 text-center text-orange-700">0</td><td class="px-3 py-3 text-center text-orange-700">5</td><td class="px-3 py-3 text-center text-orange-700">5</td>
+                            <td class="px-3 py-3 text-center font-black text-gray-900 bg-gray-100">88</td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold">수료</span></td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full text-xs font-bold shadow-sm">MVP</span></td>
+                        </tr>
+                        <tr class="table-row hover:bg-gray-50 border-b border-gray-100" data-index="3">
+                            <td class="px-3 py-3 text-center"><span class="px-2 py-1 rounded-md text-xs font-bold badge-1">1조</span></td>
+                            <td class="px-3 py-3 font-bold text-gray-900 text-center"><a href="https://www.linkedin.com/in/hyunki-kim-%EA%B9%80%ED%98%84%EA%B8%B0-a08752b6/" target="_blank" class="hover:text-blue-600 hover:underline">김현기<span class="text-xs text-gray-400 ml-1">↗</span></a></td>
+                            <td class="px-3 py-3 text-center font-bold text-blue-600">▲</td>
+                            <td class="px-3 py-3 text-center font-bold text-red-500">2</td>
+                            <td class="px-3 py-3 text-center text-purple-700">1760</td><td class="px-3 py-3 text-center text-teal-700">35</td><td class="px-3 py-3 text-center text-teal-700">13</td><td class="px-3 py-3 text-center text-orange-700">0</td><td class="px-3 py-3 text-center text-orange-700">0</td><td class="px-3 py-3 text-center text-orange-700">1</td>
+                            <td class="px-3 py-3 text-center font-black text-gray-900 bg-gray-100">52</td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-red-100 text-red-600 rounded-full text-xs font-bold">미수료</span></td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-gray-200 text-gray-600 rounded-full text-xs font-bold">미수료</span></td>
+                        </tr>
+                        <tr class="table-row hover:bg-gray-50 border-b-2 border-gray-300" data-index="4">
+                            <td class="px-3 py-3 text-center"><span class="px-2 py-1 rounded-md text-xs font-bold badge-1">1조</span></td>
+                            <td class="px-3 py-3 font-bold text-gray-900 text-center"><a href="https://www.linkedin.com/in/%EC%A7%80%EC%9B%90-%EB%B0%A9-1a34b0386/" target="_blank" class="hover:text-blue-600 hover:underline">방지원<span class="text-xs text-gray-400 ml-1">↗</span></a></td>
+                            <td class="px-3 py-3 text-center font-bold text-blue-600">▲</td>
+                            <td class="px-3 py-3 text-center font-bold text-red-500">1</td>
+                            <td class="px-3 py-3 text-center text-purple-700">1767</td><td class="px-3 py-3 text-center text-teal-700">32</td><td class="px-3 py-3 text-center text-teal-700">6</td><td class="px-3 py-3 text-center text-orange-700">0</td><td class="px-3 py-3 text-center text-orange-700">5</td><td class="px-3 py-3 text-center text-orange-700">2</td>
+                            <td class="px-3 py-3 text-center font-black text-gray-900 bg-gray-100">53</td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-red-100 text-red-600 rounded-full text-xs font-bold">미수료</span></td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-gray-200 text-gray-600 rounded-full text-xs font-bold">미수료</span></td>
+                        </tr>
+
+                        <!-- 2조 -->
+                        <tr class="table-row bg-gray-50/50 hover:bg-gray-100 border-b border-gray-100" data-index="5">
+                            <td class="px-3 py-3 text-center"><span class="px-2 py-1 rounded-md text-xs font-bold badge-2">2조</span></td>
+                            <td class="px-3 py-3 font-bold text-gray-900 text-center"><a href="https://www.linkedin.com/in/%EC%A7%80%ED%98%B8-%EB%B0%B1-4381a440b/" target="_blank" class="hover:text-blue-600 hover:underline">백지호<span class="text-xs text-gray-400 ml-1">↗</span></a></td>
+                            <td class="px-3 py-3 text-center font-bold text-blue-600">▲</td>
+                            <td class="px-3 py-3 text-center font-bold text-red-500">2</td>
+                            <td class="px-3 py-3 text-center text-purple-700">315</td><td class="px-3 py-3 text-center text-teal-700">37</td><td class="px-3 py-3 text-center text-teal-700">22</td><td class="px-3 py-3 text-center text-orange-700">0</td><td class="px-3 py-3 text-center text-orange-700">0</td><td class="px-3 py-3 text-center text-orange-700">5</td>
+                            <td class="px-3 py-3 text-center font-black text-gray-900 bg-gray-100">50</td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-red-100 text-red-600 rounded-full text-xs font-bold">미수료</span></td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-gray-200 text-gray-600 rounded-full text-xs font-bold">미수료</span></td>
+                        </tr>
+                        <tr class="table-row bg-gray-50/50 hover:bg-gray-100 border-b border-gray-100" data-index="6">
+                            <td class="px-3 py-3 text-center"><span class="px-2 py-1 rounded-md text-xs font-bold badge-2">2조</span></td>
+                            <td class="px-3 py-3 font-bold text-gray-900 text-center"><a href="https://www.linkedin.com/in/%EC%98%81%EB%8F%84-%EA%B9%80-804849356/?skipRedirect=true" target="_blank" class="hover:text-blue-600 hover:underline">김영도<span class="text-xs text-gray-400 ml-1">↗</span></a></td>
+                            <td class="px-3 py-3 text-center font-bold text-blue-600">▲</td>
+                            <td class="px-3 py-3 text-center font-bold relative text-blue-700">6 <span class="absolute top-1 right-2 text-yellow-500 text-xs">⭐</span></td>
+                            <td class="px-3 py-3 text-center text-purple-700">923</td><td class="px-3 py-3 text-center text-teal-700">188</td><td class="px-3 py-3 text-center text-teal-700">24</td><td class="px-3 py-3 text-center text-orange-700">0</td><td class="px-3 py-3 text-center text-orange-700">1</td><td class="px-3 py-3 text-center text-orange-700">5</td>
+                            <td class="px-3 py-3 text-center font-black text-gray-900 bg-gray-100">72</td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold">수료</span></td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold">우수 수료</span></td>
+                        </tr>
+                        <tr class="table-row bg-gray-50/50 hover:bg-gray-100 border-b border-gray-100" data-index="7">
+                            <td class="px-3 py-3 text-center"><span class="px-2 py-1 rounded-md text-xs font-bold badge-2">2조</span></td>
+                            <td class="px-3 py-3 font-bold text-gray-900 text-center"><a href="http://linkedin.com/in/%EC%9C%A1%EC%9E%AC%EB%B3%B5" target="_blank" class="hover:text-blue-600 hover:underline">육재복<span class="text-xs text-gray-400 ml-1">↗</span></a></td>
+                            <td class="px-3 py-3 text-center font-bold text-blue-600">▲</td>
+                            <td class="px-3 py-3 text-center font-bold text-gray-700">3</td>
+                            <td class="px-3 py-3 text-center text-purple-700">450</td><td class="px-3 py-3 text-center text-teal-700">168</td><td class="px-3 py-3 text-center text-teal-700">28</td><td class="px-3 py-3 text-center text-orange-700">0</td><td class="px-3 py-3 text-center text-orange-700">0</td><td class="px-3 py-3 text-center text-orange-700">5</td>
+                            <td class="px-3 py-3 text-center font-black text-gray-900 bg-gray-100">61</td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold">수료</span></td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold">정상 수료</span></td>
+                        </tr>
+                        <tr class="table-row bg-gray-50/50 hover:bg-gray-100 border-b-2 border-gray-300" data-index="8">
+                            <td class="px-3 py-3 text-center"><span class="px-2 py-1 rounded-md text-xs font-bold badge-2">2조</span></td>
+                            <td class="px-3 py-3 font-bold text-gray-900 text-center"><a href="https://www.linkedin.com/in/%EA%B7%9C%EC%98%81-%EA%B9%80-4b717240b/" target="_blank" class="hover:text-blue-600 hover:underline">김규영<span class="text-xs text-gray-400 ml-1">↗</span></a></td>
+                            <td class="px-3 py-3 text-center font-bold text-blue-600">O</td>
+                            <td class="px-3 py-3 text-center font-bold relative text-blue-700">4</td>
+                            <td class="px-3 py-3 text-center text-purple-700">2386</td><td class="px-3 py-3 text-center text-teal-700">365</td><td class="px-3 py-3 text-center text-teal-700">41</td><td class="px-3 py-3 text-center text-orange-700">5</td><td class="px-3 py-3 text-center text-orange-700">5</td><td class="px-3 py-3 text-center text-orange-700">5</td>
+                            <td class="px-3 py-3 text-center font-black text-gray-900 bg-gray-100">93</td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold">수료</span></td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full text-xs font-bold shadow-sm">MVP</span></td>
+                        </tr>
+
+                        <!-- 3조 -->
+                        <tr class="table-row hover:bg-gray-50 border-b border-gray-100" data-index="9">
+                            <td class="px-3 py-3 text-center"><span class="px-2 py-1 rounded-md text-xs font-bold badge-3">3조</span></td>
+                            <td class="px-3 py-3 font-bold text-gray-900 text-center"><a href="https://www.linkedin.com/in/%EB%AF%BC%EC%A7%80-%EA%B0%95-a9ba9840a/" target="_blank" class="hover:text-blue-600 hover:underline">강민지<span class="text-xs text-gray-400 ml-1">↗</span></a></td>
+                            <td class="px-3 py-3 text-center font-bold text-blue-600">O</td>
+                            <td class="px-3 py-3 text-center font-bold text-gray-700">3</td>
+                            <td class="px-3 py-3 text-center text-purple-700">1579</td><td class="px-3 py-3 text-center text-teal-700">419</td><td class="px-3 py-3 text-center text-teal-700">15</td><td class="px-3 py-3 text-center text-orange-700">1</td><td class="px-3 py-3 text-center text-orange-700">5</td><td class="px-3 py-3 text-center text-orange-700">5</td>
+                            <td class="px-3 py-3 text-center font-black text-gray-900 bg-gray-100">79</td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold">수료</span></td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold">우수 수료</span></td>
+                        </tr>
+                        <tr class="table-row hover:bg-gray-50 border-b border-gray-100" data-index="10">
+                            <td class="px-3 py-3 text-center"><span class="px-2 py-1 rounded-md text-xs font-bold badge-3">3조</span></td>
+                            <td class="px-3 py-3 font-bold text-gray-900 text-center"><a href="https://www.linkedin.com/in/hyejun-gil-%EA%B8%B8%ED%98%9C%EC%A4%80-b63344402/" target="_blank" class="hover:text-blue-600 hover:underline">길혜준<span class="text-xs text-gray-400 ml-1">↗</span></a></td>
+                            <td class="px-3 py-3 text-center font-bold text-blue-600">O</td>
+                            <td class="px-3 py-3 text-center font-bold text-gray-700">3</td>
+                            <td class="px-3 py-3 text-center text-purple-700">884</td><td class="px-3 py-3 text-center text-teal-700">581</td><td class="px-3 py-3 text-center text-teal-700">30</td><td class="px-3 py-3 text-center text-orange-700">2</td><td class="px-3 py-3 text-center text-orange-700">5</td><td class="px-3 py-3 text-center text-orange-700">5</td>
+                            <td class="px-3 py-3 text-center font-black text-gray-900 bg-gray-100">77</td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold">수료</span></td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold">우수 수료</span></td>
+                        </tr>
+                        <tr class="table-row hover:bg-gray-50 border-b border-gray-100" data-index="11">
+                            <td class="px-3 py-3 text-center"><span class="px-2 py-1 rounded-md text-xs font-bold badge-3">3조</span></td>
+                            <td class="px-3 py-3 font-bold text-gray-900 text-center"><a href="https://www.linkedin.com/in/%ED%98%9C%EB%A0%B9-%EB%AC%B8-91414940a/" target="_blank" class="hover:text-blue-600 hover:underline">문혜령<span class="text-xs text-gray-400 ml-1">↗</span></a></td>
+                            <td class="px-3 py-3 text-center font-bold text-blue-600">▲</td>
+                            <td class="px-3 py-3 text-center font-bold text-red-500">0</td>
+                            <td class="px-3 py-3 text-center text-purple-700">0</td><td class="px-3 py-3 text-center text-teal-700">0</td><td class="px-3 py-3 text-center text-teal-700">0</td><td class="px-3 py-3 text-center text-orange-700">0</td><td class="px-3 py-3 text-center text-orange-700">0</td><td class="px-3 py-3 text-center text-orange-700">0</td>
+                            <td class="px-3 py-3 text-center font-black text-gray-900 bg-gray-100">6</td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-red-100 text-red-600 rounded-full text-xs font-bold">미수료</span></td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-gray-200 text-gray-600 rounded-full text-xs font-bold">미수료</span></td>
+                        </tr>
+                        <tr class="table-row hover:bg-gray-50 border-b-2 border-gray-300" data-index="12">
+                            <td class="px-3 py-3 text-center"><span class="px-2 py-1 rounded-md text-xs font-bold badge-3">3조</span></td>
+                            <td class="px-3 py-3 font-bold text-gray-900 text-center"><a href="https://www.linkedin.com/in/ryunhui-hwang-3553b1290/" target="_blank" class="hover:text-blue-600 hover:underline">황륜희<span class="text-xs text-gray-400 ml-1">↗</span></a></td>
+                            <td class="px-3 py-3 text-center font-bold text-blue-600">▲</td>
+                            <td class="px-3 py-3 text-center font-bold text-red-500">0</td>
+                            <td class="px-3 py-3 text-center text-purple-700">0</td><td class="px-3 py-3 text-center text-teal-700">0</td><td class="px-3 py-3 text-center text-teal-700">0</td><td class="px-3 py-3 text-center text-orange-700">0</td><td class="px-3 py-3 text-center text-orange-700">0</td><td class="px-3 py-3 text-center text-orange-700">0</td>
+                            <td class="px-3 py-3 text-center font-black text-gray-900 bg-gray-100">6</td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-red-100 text-red-600 rounded-full text-xs font-bold">미수료</span></td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-gray-200 text-gray-600 rounded-full text-xs font-bold">미수료</span></td>
+                        </tr>
+
+                        <!-- 4조 -->
+                        <tr class="table-row bg-gray-50/50 hover:bg-gray-100 border-b border-gray-100" data-index="13">
+                            <td class="px-3 py-3 text-center"><span class="px-2 py-1 rounded-md text-xs font-bold badge-4">4조</span></td>
+                            <td class="px-3 py-3 font-bold text-gray-900 text-center"><a href="https://www.linkedin.com/in/%EC%B0%AC%EB%AF%B8-%EC%A0%95-60b2973a4/" target="_blank" class="hover:text-blue-600 hover:underline">정찬미<span class="text-xs text-gray-400 ml-1">↗</span></a></td>
+                            <td class="px-3 py-3 text-center font-bold text-blue-600">▲</td>
+                            <td class="px-3 py-3 text-center font-bold text-red-500">2</td>
+                            <td class="px-3 py-3 text-center text-purple-700">2324</td><td class="px-3 py-3 text-center text-teal-700">28</td><td class="px-3 py-3 text-center text-teal-700">23</td><td class="px-3 py-3 text-center text-orange-700">1</td><td class="px-3 py-3 text-center text-orange-700">5</td><td class="px-3 py-3 text-center text-orange-700">5</td>
+                            <td class="px-3 py-3 text-center font-black text-gray-900 bg-gray-100">69</td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-red-100 text-red-600 rounded-full text-xs font-bold">미수료</span></td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-gray-200 text-gray-600 rounded-full text-xs font-bold">미수료</span></td>
+                        </tr>
+                        <tr class="table-row bg-gray-50/50 hover:bg-gray-100 border-b border-gray-100" data-index="14">
+                            <td class="px-3 py-3 text-center"><span class="px-2 py-1 rounded-md text-xs font-bold badge-4">4조</span></td>
+                            <td class="px-3 py-3 font-bold text-gray-900 text-center"><a href="https://www.linkedin.com/in/%EC%9D%80%EA%B5%90-%EC%9D%B4-9ab137369/" target="_blank" class="hover:text-blue-600 hover:underline">이은교<span class="text-xs text-gray-400 ml-1">↗</span></a></td>
+                            <td class="px-3 py-3 text-center font-bold text-blue-600">O</td>
+                            <td class="px-3 py-3 text-center font-bold relative text-blue-700">6 <span class="absolute top-1 right-2 text-yellow-500 text-xs">⭐</span></td>
+                            <td class="px-3 py-3 text-center text-purple-700">617</td><td class="px-3 py-3 text-center text-teal-700">17</td><td class="px-3 py-3 text-center text-teal-700">16</td><td class="px-3 py-3 text-center text-orange-700">0</td><td class="px-3 py-3 text-center text-orange-700">5</td><td class="px-3 py-3 text-center text-orange-700">5</td>
+                            <td class="px-3 py-3 text-center font-black text-gray-900 bg-gray-100">66</td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold">수료</span></td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold">정상 수료</span></td>
+                        </tr>
+                        <tr class="table-row bg-gray-50/50 hover:bg-gray-100 border-b border-gray-100" data-index="15">
+                            <td class="px-3 py-3 text-center"><span class="px-2 py-1 rounded-md text-xs font-bold badge-4">4조</span></td>
+                            <td class="px-3 py-3 font-bold text-gray-900 text-center"><a href="https://www.linkedin.com/in/%EC%B0%A8%EC%9A%A9-%EC%A0%95-44408639a/" target="_blank" class="hover:text-blue-600 hover:underline">정차용<span class="text-xs text-gray-400 ml-1">↗</span></a></td>
+                            <td class="px-3 py-3 text-center font-bold text-blue-600">▲</td>
+                            <td class="px-3 py-3 text-center font-bold relative text-blue-700">4</td>
+                            <td class="px-3 py-3 text-center text-purple-700">6027</td><td class="px-3 py-3 text-center text-teal-700">36</td><td class="px-3 py-3 text-center text-teal-700">13</td><td class="px-3 py-3 text-center text-orange-700">1</td><td class="px-3 py-3 text-center text-orange-700">3</td><td class="px-3 py-3 text-center text-orange-700">5</td>
+                            <td class="px-3 py-3 text-center font-black text-gray-900 bg-gray-100">76</td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold">수료</span></td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold">우수 수료</span></td>
+                        </tr>
+                        <tr class="table-row bg-gray-50/50 hover:bg-gray-100 border-b-2 border-gray-300" data-index="16">
+                            <td class="px-3 py-3 text-center"><span class="px-2 py-1 rounded-md text-xs font-bold badge-4">4조</span></td>
+                            <td class="px-3 py-3 font-bold text-gray-900 text-center"><a href="https://www.linkedin.com/in/dongwoo-kang-78306633a/" target="_blank" class="hover:text-blue-600 hover:underline">강동우<span class="text-xs text-gray-400 ml-1">↗</span></a></td>
+                            <td class="px-3 py-3 text-center font-bold text-blue-600">O</td>
+                            <td class="px-3 py-3 text-center font-bold relative text-blue-700">4</td>
+                            <td class="px-3 py-3 text-center text-purple-700">836</td><td class="px-3 py-3 text-center text-teal-700">36</td><td class="px-3 py-3 text-center text-teal-700">19</td><td class="px-3 py-3 text-center text-orange-700">5</td><td class="px-3 py-3 text-center text-orange-700">0</td><td class="px-3 py-3 text-center text-orange-700">4</td>
+                            <td class="px-3 py-3 text-center font-black text-gray-900 bg-gray-100">67</td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold">수료</span></td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold">정상 수료</span></td>
+                        </tr>
+
+                        <!-- 5조 -->
+                        <tr class="table-row hover:bg-gray-50 border-b border-gray-100" data-index="17">
+                            <td class="px-3 py-3 text-center"><span class="px-2 py-1 rounded-md text-xs font-bold badge-5">5조</span></td>
+                            <td class="px-3 py-3 font-bold text-gray-900 text-center"><a href="https://www.linkedin.com/in/%EC%9D%B4%EB%9E%91-%EC%A0%95-30215840a/" target="_blank" class="hover:text-blue-600 hover:underline">정이랑<span class="text-xs text-gray-400 ml-1">↗</span></a></td>
+                            <td class="px-3 py-3 text-center font-bold text-blue-600">O</td>
+                            <td class="px-3 py-3 text-center font-bold text-red-500">1</td>
+                            <td class="px-3 py-3 text-center text-purple-700">0</td><td class="px-3 py-3 text-center text-teal-700">38</td><td class="px-3 py-3 text-center text-teal-700">0</td><td class="px-3 py-3 text-center text-orange-700">2</td><td class="px-3 py-3 text-center text-orange-700">2</td><td class="px-3 py-3 text-center text-orange-700">3</td>
+                            <td class="px-3 py-3 text-center font-black text-gray-900 bg-gray-100">34</td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-red-100 text-red-600 rounded-full text-xs font-bold">미수료</span></td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-gray-200 text-gray-600 rounded-full text-xs font-bold">미수료</span></td>
+                        </tr>
+                        <tr class="table-row hover:bg-gray-50 border-b border-gray-100" data-index="18">
+                            <td class="px-3 py-3 text-center"><span class="px-2 py-1 rounded-md text-xs font-bold badge-5">5조</span></td>
+                            <td class="px-3 py-3 font-bold text-gray-900 text-center"><a href="https://www.linkedin.com/in/%EB%8F%99%EA%B7%9C-%EA%B9%80-8b013a40b/" target="_blank" class="hover:text-blue-600 hover:underline">김동규<span class="text-xs text-gray-400 ml-1">↗</span></a></td>
+                            <td class="px-3 py-3 text-center font-bold text-blue-600">O</td>
+                            <td class="px-3 py-3 text-center font-bold text-red-500">2</td>
+                            <td class="px-3 py-3 text-center text-purple-700">876</td><td class="px-3 py-3 text-center text-teal-700">23</td><td class="px-3 py-3 text-center text-teal-700">3</td><td class="px-3 py-3 text-center text-orange-700">0</td><td class="px-3 py-3 text-center text-orange-700">0</td><td class="px-3 py-3 text-center text-orange-700">5</td>
+                            <td class="px-3 py-3 text-center font-black text-gray-900 bg-gray-100">48</td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-red-100 text-red-600 rounded-full text-xs font-bold">미수료</span></td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-gray-200 text-gray-600 rounded-full text-xs font-bold">미수료</span></td>
+                        </tr>
+                        <tr class="table-row hover:bg-gray-50 border-b border-gray-100" data-index="19">
+                            <td class="px-3 py-3 text-center"><span class="px-2 py-1 rounded-md text-xs font-bold badge-5">5조</span></td>
+                            <td class="px-3 py-3 font-bold text-gray-900 text-center"><a href="https://www.linkedin.com/in/twinklexjulie/" target="_blank" class="hover:text-blue-600 hover:underline">서지은<span class="text-xs text-gray-400 ml-1">↗</span></a></td>
+                            <td class="px-3 py-3 text-center font-bold text-blue-600">O</td>
+                            <td class="px-3 py-3 text-center font-bold relative text-blue-700">5 <span class="absolute top-1 right-2 text-yellow-500 text-xs">⭐</span></td>
+                            <td class="px-3 py-3 text-center text-purple-700">3101</td><td class="px-3 py-3 text-center text-teal-700">31</td><td class="px-3 py-3 text-center text-teal-700">10</td><td class="px-3 py-3 text-center text-orange-700">2</td><td class="px-3 py-3 text-center text-orange-700">5</td><td class="px-3 py-3 text-center text-orange-700">5</td>
+                            <td class="px-3 py-3 text-center font-black text-gray-900 bg-gray-100">85</td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold">수료</span></td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full text-xs font-bold shadow-sm">MVP</span></td>
+                        </tr>
+                        <tr class="table-row hover:bg-gray-50 border-b border-gray-100" data-index="20">
+                            <td class="px-3 py-3 text-center"><span class="px-2 py-1 rounded-md text-xs font-bold badge-5">5조</span></td>
+                            <td class="px-3 py-3 font-bold text-gray-900 text-center"><a href="https://www.linkedin.com/in/%EC%9D%80%EB%B9%84-%EC%98%A4-2196b2269/" target="_blank" class="hover:text-blue-600 hover:underline">오은비<span class="text-xs text-gray-400 ml-1">↗</span></a></td>
+                            <td class="px-3 py-3 text-center font-bold text-red-500">X</td>
+                            <td class="px-3 py-3 text-center font-bold text-red-500">1</td>
+                            <td class="px-3 py-3 text-center text-purple-700">161</td><td class="px-3 py-3 text-center text-teal-700">5</td><td class="px-3 py-3 text-center text-teal-700">13</td><td class="px-3 py-3 text-center text-orange-700">0</td><td class="px-3 py-3 text-center text-orange-700">0</td><td class="px-3 py-3 text-center text-orange-700">0</td>
+                            <td class="px-3 py-3 text-center font-black text-gray-900 bg-gray-100">21</td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-red-100 text-red-600 rounded-full text-xs font-bold">미수료</span></td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-gray-200 text-gray-600 rounded-full text-xs font-bold">미수료</span></td>
+                        </tr>
+                        <tr class="table-row hover:bg-gray-50 border-b border-gray-100" data-index="21">
+                            <td class="px-3 py-3 text-center"><span class="px-2 py-1 rounded-md text-xs font-bold badge-5">5조</span></td>
+                            <td class="px-3 py-3 font-bold text-gray-900 text-center"><a href="https://www.linkedin.com/in/%EC%84%B1%ED%98%84-%EC%A0%95-1147942b6/?isSelfProfile=true" target="_blank" class="hover:text-blue-600 hover:underline">정성현<span class="text-xs text-gray-400 ml-1">↗</span></a></td>
+                            <td class="px-3 py-3 text-center font-bold text-blue-600">O</td>
+                            <td class="px-3 py-3 text-center font-bold text-red-500">1</td>
+                            <td class="px-3 py-3 text-center text-purple-700">193</td><td class="px-3 py-3 text-center text-teal-700">13</td><td class="px-3 py-3 text-center text-teal-700">15</td><td class="px-3 py-3 text-center text-orange-700">0</td><td class="px-3 py-3 text-center text-orange-700">0</td><td class="px-3 py-3 text-center text-orange-700">5</td>
+                            <td class="px-3 py-3 text-center font-black text-gray-900 bg-gray-100">37</td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-red-100 text-red-600 rounded-full text-xs font-bold">미수료</span></td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-gray-200 text-gray-600 rounded-full text-xs font-bold">미수료</span></td>
+                        </tr>
+                        <tr class="table-row hover:bg-gray-50" data-index="22">
+                            <td class="px-3 py-3 text-center"><span class="px-2 py-1 rounded-md text-xs font-bold badge-5">5조</span></td>
+                            <td class="px-3 py-3 font-bold text-gray-900 text-center"><a href="https://www.linkedin.com/in/%EC%9D%98%EC%97%BD-%EC%A0%95-487aa2362/" target="_blank" class="hover:text-blue-600 hover:underline">정의엽<span class="text-xs text-gray-400 ml-1">↗</span></a></td>
+                            <td class="px-3 py-3 text-center font-bold text-blue-600">O</td>
+                            <td class="px-3 py-3 text-center font-bold text-gray-700">3</td>
+                            <td class="px-3 py-3 text-center text-purple-700">634</td><td class="px-3 py-3 text-center text-teal-700">9</td><td class="px-3 py-3 text-center text-teal-700">5</td><td class="px-3 py-3 text-center text-orange-700">1</td><td class="px-3 py-3 text-center text-orange-700">0</td><td class="px-3 py-3 text-center text-orange-700">3</td>
+                            <td class="px-3 py-3 text-center font-black text-gray-900 bg-gray-100">47</td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold">수료</span></td>
+                            <td class="px-3 py-3 text-center bg-gray-50"><span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold">정상 수료</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 탭 2: 평가 점수표 (환산점수) -->
+            <div id="tab-content-score" class="table-scroll overflow-x-auto rounded-xl border border-gray-200 shadow-sm bg-white hidden">
+                <table class="w-full text-sm text-left text-gray-600 whitespace-nowrap" id="table-score">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-100 border-b border-gray-200">
+                        <tr>
+                            <th rowspan="2" class="px-3 py-3 text-center border-r border-gray-200 bg-white min-w-[50px] sortable sort-icon" onclick="sortTable('table-score', 0, 'string')">조</th>
+                            <th rowspan="2" class="px-3 py-3 text-center border-r border-gray-200 bg-white min-w-[100px]">이름(링크)</th>
+                            <th colspan="3" class="px-3 py-2 text-center text-white bg-blue-600 border-r border-white/20">① 과제 성실성 (30)</th>
+                            <th colspan="1" class="px-3 py-2 text-center text-white bg-purple-600 border-r border-white/20">② 파급력 (30)</th>
+                            <th colspan="2" class="px-3 py-2 text-center text-white bg-teal-600 border-r border-white/20">③ 일촌·SSI (25)</th>
+                            <th colspan="3" class="px-3 py-2 text-center text-white bg-orange-600 border-r border-white/20">④ 커뮤니티 (15)</th>
+                            <th rowspan="2" class="px-3 py-3 text-center bg-gray-800 text-white border-r border-gray-700 w-16 sortable sort-icon" onclick="sortTable('table-score', 13, 'number')">총점</th>
+                            <th rowspan="2" class="px-3 py-3 text-center bg-gray-900 text-white w-24">수료</th>
+                            <th rowspan="2" class="px-3 py-3 text-center bg-gray-900 text-white w-24">등급</th>
+                        </tr>
+                        <tr class="bg-gray-50">
+                            <th class="px-2 py-2 text-center text-blue-700 border-r border-gray-200 sortable sort-icon" onclick="sortTable('table-score', 2, 'number')">참석(10)</th>
+                            <th class="px-2 py-2 text-center text-blue-700 border-r border-gray-200 sortable sort-icon" onclick="sortTable('table-score', 3, 'number')">프로필(5)</th>
+                            <th class="px-2 py-2 text-center text-blue-700 border-r border-gray-200 font-bold sortable sort-icon" onclick="sortTable('table-score', 4, 'number')">업로드(15)</th>
+                            <th class="px-2 py-2 text-center text-purple-700 border-r border-gray-200 sortable sort-icon" onclick="sortTable('table-score', 5, 'number')">노출수(30)</th>
+                            <th class="px-2 py-2 text-center text-teal-700 border-r border-gray-200 sortable sort-icon" onclick="sortTable('table-score', 6, 'number')">일촌(15)</th>
+                            <th class="px-2 py-2 text-center text-teal-700 border-r border-gray-200 sortable sort-icon" onclick="sortTable('table-score', 7, 'number')">SSI(10)</th>
+                            <th class="px-2 py-2 text-center text-orange-700 border-r border-gray-200 sortable sort-icon" onclick="sortTable('table-score', 8, 'number')">동료댓글(10)</th>
+                            <th class="px-2 py-2 text-center text-orange-700 border-r border-gray-200 sortable sort-icon" onclick="sortTable('table-score', 9, 'number')">내글댓글(3)</th>
+                            <th class="px-2 py-2 text-center text-orange-700 border-r border-gray-200 sortable sort-icon" onclick="sortTable('table-score', 10, 'number')">좋아요(2)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="score-tbody">
+                        <!-- Score 데이터 삽입 -->
+                        <script>
+                            const scoreData = [
+                                { group: 1, name: "강민수", url: "https://www.linkedin.com/in/minsu-kang-kor/", scores: [10, 5, 15, 15, 7, 10, 0, 0, 5], total: 67, pass: true, grade: "정상 수료", bg: "" },
+                                { group: 1, name: "조충식", url: "https://www.linkedin.com/in/%EC%B6%A9%EC%8B%9D-%EC%A1%B0-a878283a2/", scores: [10, 5, 13, 25, 15, 10, 0, 5, 5], total: 88, pass: true, grade: "MVP", bg: "" },
+                                { group: 1, name: "김현기", url: "https://www.linkedin.com/in/hyunki-kim-%EA%B9%80%ED%98%84%EA%B8%B0-a08752b6/", scores: [6, 5, 7, 20, 7, 6, 0, 0, 1], total: 52, pass: false, grade: "미수료", bg: "" },
+                                { group: 1, name: "방지원", url: "https://www.linkedin.com/in/%EC%A7%80%EC%9B%90-%EB%B0%A9-1a34b0386/", scores: [6, 5, 5, 20, 7, 3, 0, 5, 2], total: 53, pass: false, grade: "미수료", bg: "border-b-2 border-gray-300" },
+                                
+                                { group: 2, name: "백지호", url: "https://www.linkedin.com/in/%EC%A7%80%ED%98%B8-%EB%B0%B1-4381a440b/", scores: [6, 5, 7, 10, 7, 10, 0, 0, 5], total: 50, pass: false, grade: "미수료", bg: "bg-gray-50/50" },
+                                { group: 2, name: "김영도", url: "https://www.linkedin.com/in/%EC%98%81%EB%8F%84-%EA%B9%80-804849356/?skipRedirect=true", scores: [6, 5, 15, 15, 15, 10, 0, 1, 5], total: 72, pass: true, grade: "우수 수료", bg: "bg-gray-50/50" },
+                                { group: 2, name: "육재복", url: "http://linkedin.com/in/%EC%9C%A1%EC%9E%AC%EB%B3%B5", scores: [6, 5, 10, 10, 15, 10, 0, 0, 5], total: 61, pass: true, grade: "정상 수료", bg: "bg-gray-50/50" },
+                                { group: 2, name: "김규영", url: "https://www.linkedin.com/in/%EA%B7%9C%EC%98%81-%EA%B9%80-4b717240b/", scores: [10, 5, 13, 25, 15, 10, 5, 5, 5], total: 93, pass: true, grade: "MVP", bg: "bg-gray-50/50 border-b-2 border-gray-300" },
+
+                                { group: 3, name: "강민지", url: "https://www.linkedin.com/in/%EB%AF%BC%EC%A7%80-%EA%B0%95-a9ba9840a/", scores: [10, 5, 10, 20, 15, 8, 1, 5, 5], total: 79, pass: true, grade: "우수 수료", bg: "" },
+                                { group: 3, name: "길혜준", url: "https://www.linkedin.com/in/hyejun-gil-%EA%B8%B8%ED%98%9C%EC%A4%80-b63344402/", scores: [10, 5, 10, 15, 15, 10, 2, 5, 5], total: 77, pass: true, grade: "우수 수료", bg: "" },
+                                { group: 3, name: "문혜령", url: "https://www.linkedin.com/in/%ED%98%9C%EB%A0%B9-%EB%AC%B8-91414940a/", scores: [6, 0, 0, 0, 0, 0, 0, 0, 0], total: 6, pass: false, grade: "미수료", bg: "" },
+                                { group: 3, name: "황륜희", url: "https://www.linkedin.com/in/ryunhui-hwang-3553b1290/", scores: [6, 0, 0, 0, 0, 0, 0, 0, 0], total: 6, pass: false, grade: "미수료", bg: "border-b-2 border-gray-300" },
+
+                                { group: 4, name: "정찬미", url: "https://www.linkedin.com/in/%EC%B0%AC%EB%AF%B8-%EC%A0%95-60b2973a4/", scores: [6, 5, 7, 25, 5, 10, 1, 5, 5], total: 69, pass: false, grade: "미수료", bg: "bg-gray-50/50" },
+                                { group: 4, name: "이은교", url: "https://www.linkedin.com/in/%EC%9D%80%EA%B5%90-%EC%9D%B4-9ab137369/", scores: [10, 5, 15, 15, 3, 8, 0, 5, 5], total: 66, pass: true, grade: "정상 수료", bg: "bg-gray-50/50" },
+                                { group: 4, name: "정차용", url: "https://www.linkedin.com/in/%EC%B0%A8%EC%9A%A9-%EC%A0%95-44408639a/", scores: [6, 5, 13, 30, 7, 6, 1, 3, 5], total: 76, pass: true, grade: "우수 수료", bg: "bg-gray-50/50" },
+                                { group: 4, name: "강동우", url: "https://www.linkedin.com/in/dongwoo-kang-78306633a/", scores: [10, 5, 13, 15, 7, 8, 5, 0, 4], total: 67, pass: true, grade: "정상 수료", bg: "bg-gray-50/50 border-b-2 border-gray-300" },
+
+                                { group: 5, name: "정이랑", url: "https://www.linkedin.com/in/%EC%9D%B4%EB%9E%91-%EC%A0%95-30215840a/", scores: [10, 5, 5, 0, 7, 0, 2, 2, 3], total: 34, pass: false, grade: "미수료", bg: "" },
+                                { group: 5, name: "김동규", url: "https://www.linkedin.com/in/%EB%8F%99%EA%B7%9C-%EA%B9%80-8b013a40b/", scores: [10, 5, 7, 15, 5, 1, 0, 0, 5], total: 48, pass: false, grade: "미수료", bg: "" },
+                                { group: 5, name: "서지은", url: "https://www.linkedin.com/in/twinklexjulie/", scores: [10, 5, 15, 30, 7, 6, 2, 5, 5], total: 85, pass: true, grade: "MVP", bg: "" },
+                                { group: 5, name: "오은비", url: "https://www.linkedin.com/in/%EC%9D%80%EB%B9%84-%EC%98%A4-2196b2269/", scores: [0, 5, 5, 5, 0, 6, 0, 0, 0], total: 21, pass: false, grade: "미수료", bg: "" },
+                                { group: 5, name: "정성현", url: "https://www.linkedin.com/in/%EC%84%B1%ED%98%84-%EC%A0%95-1147942b6/?isSelfProfile=true", scores: [6, 5, 5, 5, 3, 8, 0, 0, 5], total: 37, pass: false, grade: "미수료", bg: "" },
+                                { group: 5, name: "정의엽", url: "https://www.linkedin.com/in/%EC%9D%98%EC%97%BD-%EC%A0%95-487aa2362/", scores: [10, 5, 10, 15, 0, 3, 1, 0, 3], total: 47, pass: false, grade: "정상 수료", bg: "" },
+                            ];
+
+                            const tbody = document.getElementById('score-tbody');
+                            scoreData.forEach((d, i) => {
+                                const badgeClass = `badge-${d.group}`;
+                                const passHtml = d.pass ? '<span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold">수료</span>' : '<span class="px-3 py-1 bg-red-100 text-red-600 rounded-full text-xs font-bold">미수료</span>';
+                                
+                                let gradeHtml = '';
+                                if(d.grade === 'MVP') gradeHtml = '<span class="px-3 py-1 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full text-xs font-bold shadow-sm">MVP</span>';
+                                else if(d.grade === '우수 수료') gradeHtml = '<span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold">우수 수료</span>';
+                                else if(d.grade === '정상 수료') gradeHtml = '<span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold">정상 수료</span>';
+                                else gradeHtml = '<span class="px-3 py-1 bg-gray-200 text-gray-600 rounded-full text-xs font-bold">미수료</span>';
+
+                                tbody.innerHTML += `
+                                <tr class="table-row hover:bg-gray-100 border-b border-gray-100 ${d.bg}" data-index="${i}">
+                                    <td class="px-3 py-3 text-center border-r border-gray-100 bg-white"><span class="px-2 py-1 rounded-md text-xs font-bold ${badgeClass}">${d.group}조</span></td>
+                                    <td class="px-3 py-3 font-bold text-gray-900 border-r border-gray-100 bg-white text-center">
+                                        <a href="${d.url}" target="_blank" class="hover:text-blue-600 hover:underline inline-flex items-center gap-1">${d.name}<span class="text-xs text-gray-400">↗</span></a>
+                                    </td>
+                                    <td class="px-3 py-3 text-center text-blue-800 border-r border-blue-50 bg-blue-50/30">${d.scores[0]}</td>
+                                    <td class="px-3 py-3 text-center text-blue-800 border-r border-blue-50 bg-blue-50/30">${d.scores[1]}</td>
+                                    <td class="px-3 py-3 text-center font-bold text-blue-800 border-r border-gray-200 bg-blue-50/50">${d.scores[2]}</td>
+                                    <td class="px-3 py-3 text-center text-purple-800 border-r border-gray-200 bg-purple-50/30 font-bold">${d.scores[3]}</td>
+                                    <td class="px-3 py-3 text-center text-teal-800 border-r border-teal-50 bg-teal-50/30">${d.scores[4]}</td>
+                                    <td class="px-3 py-3 text-center text-teal-800 border-r border-gray-200 bg-teal-50/30">${d.scores[5]}</td>
+                                    <td class="px-3 py-3 text-center text-orange-800 border-r border-orange-50 bg-orange-50/30">${d.scores[6]}</td>
+                                    <td class="px-3 py-3 text-center text-orange-800 border-r border-orange-50 bg-orange-50/30">${d.scores[7]}</td>
+                                    <td class="px-3 py-3 text-center text-orange-800 border-r border-gray-200 bg-orange-50/30">${d.scores[8]}</td>
+                                    <td class="px-3 py-3 text-center font-black text-gray-900 bg-gray-100 text-lg border-r border-gray-200">${d.total}</td>
+                                    <td class="px-3 py-3 text-center bg-gray-50 border-r border-gray-100">${passHtml}</td>
+                                    <td class="px-3 py-3 text-center bg-gray-50">${gradeHtml}</td>
+                                </tr>`;
+                            });
+                        </script>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 최종 요약 및 MVP 하이라이트 -->
+        <section class="mt-10 bg-gradient-to-br from-gray-900 to-blue-900 rounded-2xl shadow-xl border border-gray-800 p-8 text-white relative overflow-hidden">
+            <!-- 배경 데코레이션 -->
+            <div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 rounded-full bg-blue-500 opacity-20 blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 -ml-16 -mb-16 w-64 h-64 rounded-full bg-purple-500 opacity-20 blur-3xl"></div>
+            
+            <div class="relative z-10">
+                <h3 class="text-2xl font-bold text-white mb-6">🏆 영예의 MVP (3명)</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <!-- MVP 1 -->
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20 text-center transform transition hover:-translate-y-1 hover:shadow-2xl">
+                        <div class="w-16 h-16 mx-auto bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center text-2xl shadow-lg mb-4">🥇</div>
+                        <h4 class="text-xl font-bold text-white mb-1"><a href="https://www.linkedin.com/in/%EA%B7%9C%EC%98%81-%EA%B9%80-4b717240b/" target="_blank" class="hover:underline">김규영</a> <span class="text-sm font-normal text-gray-300">님</span></h4>
+                        <p class="text-blue-200 text-sm mb-3">Powered by FF그룹</p>
+                        <div class="inline-block px-4 py-2 bg-white/20 rounded-lg">
+                            <span class="text-sm text-gray-300">최종 점수</span>
+                            <span class="text-2xl font-black text-yellow-400 ml-2">93점</span>
+                        </div>
+                    </div>
+                    
+                    <!-- MVP 2 -->
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20 text-center transform transition hover:-translate-y-1 hover:shadow-2xl">
+                        <div class="w-16 h-16 mx-auto bg-gradient-to-r from-gray-300 to-gray-500 rounded-full flex items-center justify-center text-2xl shadow-lg mb-4">🥈</div>
+                        <h4 class="text-xl font-bold text-white mb-1"><a href="https://www.linkedin.com/in/%EC%B6%A9%EC%8B%9D-%EC%A1%B0-a878283a2/" target="_blank" class="hover:underline">조충식</a> <span class="text-sm font-normal text-gray-300">님</span></h4>
+                        <p class="text-blue-200 text-sm mb-3">대표직속 / QC파트</p>
+                        <div class="inline-block px-4 py-2 bg-white/20 rounded-lg">
+                            <span class="text-sm text-gray-300">최종 점수</span>
+                            <span class="text-2xl font-black text-gray-200 ml-2">88점</span>
+                        </div>
+                    </div>
+                    
+                    <!-- MVP 3 -->
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20 text-center transform transition hover:-translate-y-1 hover:shadow-2xl">
+                        <div class="w-16 h-16 mx-auto bg-gradient-to-r from-orange-400 to-orange-600 rounded-full flex items-center justify-center text-2xl shadow-lg mb-4">🥉</div>
+                        <h4 class="text-xl font-bold text-white mb-1"><a href="https://www.linkedin.com/in/twinklexjulie/" target="_blank" class="hover:underline">서지은</a> <span class="text-sm font-normal text-gray-300">님</span></h4>
+                        <p class="text-blue-200 text-sm mb-3">지점운영그룹 / 사업2팀</p>
+                        <div class="inline-block px-4 py-2 bg-white/20 rounded-lg">
+                            <span class="text-sm text-gray-300">최종 점수</span>
+                            <span class="text-2xl font-black text-orange-300 ml-2">85점</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-t border-white/10 pt-5 mt-5">
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        <span class="font-bold text-blue-300">💡 평가 인사이트:</span> "우수한 성과를 낸 교육생들의 공통점은 단순히 과제 제출을 위한 일방향적 글쓰기에 그치지 않고, 
+                        <span class="text-white font-bold bg-white/10 px-1 rounded">다른 동료의 글에 적극적으로 댓글을 달며 소통(네트워킹)</span>했다는 점입니다. 이를 통해 링크드인 알고리즘의 선택을 받아 노출수와 계정 지수(SSI)가 폭발적으로 성장하는 시너지 효과를 확인할 수 있었습니다."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        // 탭 전환 기능
+        function switchTab(tabName) {
+            const rawContent = document.getElementById('tab-content-raw');
+            const scoreContent = document.getElementById('tab-content-score');
+            const rawBtn = document.getElementById('tab-btn-raw');
+            const scoreBtn = document.getElementById('tab-btn-score');
+
+            if (tabName === 'raw') {
+                rawContent.classList.remove('hidden');
+                scoreContent.classList.add('hidden');
+                
+                rawBtn.classList.replace('bg-gray-50', 'bg-blue-600');
+                rawBtn.classList.replace('text-gray-600', 'text-white');
+                rawBtn.classList.replace('border-transparent', 'border-blue-600');
+                rawBtn.classList.remove('hover:bg-gray-100');
+                
+                scoreBtn.classList.replace('bg-blue-600', 'bg-gray-50');
+                scoreBtn.classList.replace('text-white', 'text-gray-600');
+                scoreBtn.classList.replace('border-blue-600', 'border-transparent');
+                scoreBtn.classList.add('hover:bg-gray-100');
+            } else {
+                scoreContent.classList.remove('hidden');
+                rawContent.classList.add('hidden');
+                
+                scoreBtn.classList.replace('bg-gray-50', 'bg-blue-600');
+                scoreBtn.classList.replace('text-gray-600', 'text-white');
+                scoreBtn.classList.replace('border-transparent', 'border-blue-600');
+                scoreBtn.classList.remove('hover:bg-gray-100');
+                
+                rawBtn.classList.replace('bg-blue-600', 'bg-gray-50');
+                rawBtn.classList.replace('text-white', 'text-gray-600');
+                rawBtn.classList.replace('border-blue-600', 'border-transparent');
+                rawBtn.classList.add('hover:bg-gray-100');
+            }
+        }
+
+        // 테이블 정렬 상태 기록
+        let sortDirections = {};
+
+        // 정렬 초기화 기능
+        function resetTables() {
+            sortDirections = {};
+            
+            ['table-raw', 'table-score'].forEach(tableId => {
+                const table = document.getElementById(tableId);
+                const tbody = table.querySelector('tbody');
+                const rows = Array.from(tbody.querySelectorAll('tr.table-row'));
+                
+                // data-index 기준으로 다시 오름차순 정렬
+                rows.sort((a, b) => {
+                    return parseInt(a.getAttribute('data-index')) - parseInt(b.getAttribute('data-index'));
+                });
+
+                // 조별 border-b 복원 (수동 할당된 bg/border 클래스는 유지가 어려우므로 새로고침을 추천할 수도 있음)
+                // 간단한 초기화의 경우 요소를 재배치
+                tbody.innerHTML = '';
+                rows.forEach(row => tbody.appendChild(row));
+                
+                // 아이콘 초기화
+                const headers = table.querySelectorAll('th');
+                headers.forEach(th => {
+                    th.classList.remove('sort-asc', 'sort-desc');
+                });
+            });
+        }
+
+        // 정렬 기능
+        function sortTable(tableId, n, type) {
+            const table = document.getElementById(tableId);
+            const tbody = table.querySelector('tbody');
+            const rows = Array.from(tbody.querySelectorAll('tr.table-row'));
+            const header = table.querySelectorAll('th')[n];
+            
+            // 방향 설정
+            let dir = sortDirections[n] === 'asc' ? 'desc' : 'asc';
+            sortDirections[n] = dir;
+
+            // 모든 헤더 아이콘 초기화
+            table.querySelectorAll('th').forEach(th => th.classList.remove('sort-asc', 'sort-desc'));
+            header.classList.add(dir === 'asc' ? 'sort-asc' : 'sort-desc');
+
+            rows.sort((rowA, rowB) => {
+                let cellA = rowA.querySelectorAll('td')[n].innerText.trim();
+                let cellB = rowB.querySelectorAll('td')[n].innerText.trim();
+
+                if (type === 'number') {
+                    // 별표 등 특수문자 제거 후 숫자 파싱
+                    cellA = parseFloat(cellA.replace(/[^0-9.-]+/g,"")) || 0;
+                    cellB = parseFloat(cellB.replace(/[^0-9.-]+/g,"")) || 0;
+                    return dir === 'asc' ? cellA - cellB : cellB - cellA;
+                } else {
+                    return dir === 'asc' ? cellA.localeCompare(cellB) : cellB.localeCompare(cellA);
+                }
+            });
+
+            // 정렬 시 조별 구분선(border-b-2)을 일괄 삭제하여 깔끔하게 표시
+            rows.forEach(row => {
+                row.classList.remove('border-b-2', 'border-gray-300');
+                row.classList.add('border-b', 'border-gray-100');
+            });
+
+            // 재조립
+            tbody.innerHTML = '';
+            rows.forEach(row => tbody.appendChild(row));
+        }
+    </script>
+</body>
+</html>
